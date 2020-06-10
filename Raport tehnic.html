@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>TaSOr Scholarly HTML report</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+</head>
+
+<body prefix="schema: http://schema.org">
+    <header>
+        <div class="banner">
+            <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+            <div class="status">FORG project</div>
+        </div>
+        <h1>Food Organizer</h1>
+    </header>
+    <div role="contentinfo">
+        <dl>
+            <dt>Autori</dt>
+            <dd>
+                Onofrei Claudia &amp; Popescu Diana Elena &amp; Spulber Claudiu
+            </dd>
+        </dl>
+    </div>
+    <section id="introduction" role="doc-introduction">
+        <h2>Descrierea proiectului</h2>
+        <p>FORG este o aplicatie web care ajuta la gestionarea preferintelor culinare ale unei persoane sau grup de persoane. Aplicatia ofera suport pentru stocarea unor date aferente produselor existente( nume, pret, locatii unde se gaseste, descriere, ingrediente, etc. ). De asemenea, sistemul ofera suport pentru realizarea listelor de cumparaturi de catre clienti, dar si administrarea utilizatorilor si produselor de catre administrator.</p>
+        <p>Se pot genera statistici diverse care pot fi exportate in diferite formate - CSV, PDF. De asemenea, este prezent si un clasament al celor mai populare produse, sub forma unui flux de date RSS.</p>
+    </section>
+    <section id="structure">
+        <h2>Tehnologii utilizate</h2>
+        <p>
+            Pentru realizarea interfeței utilizatorului, am utilizat limbajele HTML, CSS si JavaScript.
+        </p>
+        <p> Pentru partea de back-end, limbajul utilizat este PHP. Iar pentru stocarea datelor am folosit MySQL.
+        </p>
+    </section>
+    <section id="structure">
+        <h2>Sistemul de stocare al codului</h2>
+        <p>Pentru stocarea și managementul online al codului-sursă folosim GitHub: </p>
+        <a href="https://github.com/ClaudiuSpulber/TW.git">Repository-ul de pe GitHub</a>
+        <p>Pentru o buna organizare si comunicare am folosit aplicatia Discord.</p>
+    </section>
+    <section id="structure">
+        <h2>Funcționalități ale aplicației</h2>
+        <p>Pentru ca utilizatorul sa se poata bucura de facilitatile aplicatiei FORG este necesara autentificarea lui.</p>
+        <p>Dupa autentificare sau logare, clientul are urmatoarele posibilitati:
+            <p>
+                <ul>
+                   <li>Informarea cu privire la aplicatia FORG si la cum poate fi ea utilizata</li>
+                   <li>Vizualizarea produselor grupate pe categorii( Soups, Desserts, etc.)</li>
+                   <li>Vizualizarea fiecarui produs in parte, alaturi de informatii aferente</li>
+                   <li>Adaugarea unui produs la Lista de cumparaturi sau adaugarea lui la Favorite</li>
+                   <li>Vizualizarea listelor de cumparaturi</li>
+                   <li>Vizualizarea si editarea contului personal, care include informatiile persoanale ale utilizatorului dar si produsele adaugate la favorite</li>
+                   <li>Crearea unui grup de utilizatori</li>
+				   <li>Cautarea anumitor produse<li>
+                </ul>
+                </p>
+            <p>Posibilitatile administratorului sunt:
+                <p>
+                    <ul>
+                        <li>Vizualizarea produselor grupate pe categorii( Soups, Desserts, etc.)</li>
+                        <li>Vizualizarea, adaugarea sau stergerea unui produs</li>
+                        <li>Adaugarea unui grup nou</li>
+                        <li>Adaugarea sau stergerea unui cont de utilizator</li>
+                        <li>Exportarea in format CSV, PDF si RSS a unor date</li>
+						<li>Cautarea anumitor produse</li>
+                    </ul>
+                </p>
+    </section>
+    <section id="semantics">
+        <h2>Detalii despre arhitectura</h2>
+        <section id="Root">
+            <h3>Maniera de interacțiune cu utilizatorul</h3>
+            <img src="User.png" height=100% width=100%>
+        </section>
+        <section id="Root">
+            <h3>Maniera de interactiun a administratorului</h3>
+            <img src="Administrator.png" height=100% width=100%>
+        </section>
+        <section id="Root">
+            <h3>Modelarea datelor</h3>
+            <img src="tabele.png" height=100% width=100%>
+        </section>
+    </section>
+	    <section id="structure">
+        <h2>Etapele de dezvoltare</h2>
+		<p>Partea de front-end a aplicatiei FORG a fost realizata dupa urmatorii pasi:</p>
+		<p>Onofrei Claudia:
+		<ul>
+		<li>Meniul aplicatiei</li>
+		<li>Header</li>
+		<li>Footer</li>
+		<li>Pagina principala</li>
+		<li>Pagina de contact</li>
+		<li>Pagina de search</li>
+		</ul>
+		</p>
+		<p>Popescu Diana Elena:
+		<ul>
+		<li>Pagina unui produs</li>
+		<li>Pagina cu lista de cumparaturi a utilizatorului</li>
+		<li>Pagina administratorului</li>
+		<li>Pagina de adaugare produs/ stergere produs pentru administrator</li>
+		<li>Pagina de adaugare/ stergere cont de utilizator pentru administrator</li>
+		<li>Pagina adaugare a unui grup de utilizatori pentru administrator</li>
+		<li>Pagina de autentificare</li>
+		<li>Pagina de inregistrare</li>
+		
+		</ul>
+		</p>
+		<p>Spulber Claudiu:
+		<ul>
+		<li>Pagina cu categoriile de produse</li>
+		<li>Pagina contului de utilizator</li>
+		<li>Pagina de adaugare grup pentru utilizator</li>
+		<li>Pagina unui grup de utilizatori</li>
+		</ul>
+		</p>
+		<p>Partea de back-end a aplicatiei FORG a fost realizata in urmatorul mod:</p>
+		<p>Onofrei Claudia:
+		<ul>
+		<li>Meniul aplicatiei</li>
+		<li>Search bar</li>
+		<li>Pagina de contact</li>
+		<li>Adaugare/ stergere produs pentru administrator</li>
+		<li>Adaugare/ stergere user pentru administrator</li>
+		<li>Adaugare grup pentru administrator</li>
+		<li>Export date in format PDF</li>
+		</ul>
+		</p>
+		<p>Popescu Diana Elena:
+		<ul>
+		<li>Pagina unui produs</li>
+		<li>Pagina cu lista de cumparaturi a utilizatorului</li>
+		<li>Export date in format CSV</li>
+		<li>Afisarea mesajelor primite in pagina administratorului</li>
+		<li>Pagina de autentificare</li>
+        <li>Pagina de inregistrare</li>
+        <li>Formular de adaugare cont de administrator</li>
+		</ul>
+		</p>
+		<p>Spulber Claudiu:
+		<ul>
+		<li>Pagina cu categoriile de produse</li>
+		<li>Pagina contului de utilizator</li>
+		<li>Pagina de adaugare grup pentru utilizator</li>
+		<li>Pagina unui grup de utilizatori</li>
+		<li>Export date RSS</li>
+		</ul>
+		</p>
+    </section>
+    <section id="Root">
+        <h3>Resurse</h3>
+        <ul>
+            <li><a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a></li>
+            <li><a href="https://validator.w3.org/">HTML Validator</a></li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://www.dbdesigner.net/">Modelarea diagramei pentru baza de date</a></li>
+            <li><a href="https://app.diagrams.net/">UML</a></li>
+        </ul>
+    </section>
+    <br><br><br>
+</body>
+
+</html>

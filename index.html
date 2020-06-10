@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ghid de utilizare</title>
+  <link rel="stylesheet" href="css/scholarly.min.css">
+  <script src="js/scholarly.min.js"></script>
+</head>
+
+<body prefix="schema: http://schema.org">
+  <header>
+    <h1>Ghid de utilizare</h1>
+  </header>
+  <div role="contentinfo">
+    <dl>
+      <dt>Autori</dt>
+      <dd>
+        Onofrei Claudia &amp; Popescu Diana Elena &amp; Spulber Claudiu
+      </dd>
+    </dl>
+  </div>
+  <section id="introduction" role="doc-introduction">
+
+    <h2>Introducere</h2>
+    <p>
+    <p>FORG este o aplicatie web care ajuta la gestionarea preferintelor culinare ale unei persoane sau grup de
+      persoane. Aplicatia ofera suport pentru stocarea unor date aferente produselor existente( nume, pret, locatii unde
+      se gaseste, descriere, ingrediente, etc. ). De asemenea, sistemul ofera suport pentru realizarea listelor de
+      cumparaturi de catre clienti, dar si administrarea utilizatorilor si produselor de catre administrator.</p>
+    <p>Se pot genera statistici diverse care pot fi exportate in diferite formate - CSV, PDF. De asemenea, este prezent
+      si un clasament al celor mai populare produse, sub forma unui flux de date RSS.</p>
+    </p>
+  </section>
+  <section id="utilizare">
+
+    <h2>Utilizare</h2>
+
+    <section id="logare">
+      <h3>Logare</h3>
+      <p>Pentru ca utilizatorul sa se poata bucura de experienta FORG, acesta trebuie sa se autentifice. Autentificarea
+        pe aplicatia FORG se poate realiza din pagina "welcome.php" unde utilizatorul este nevoit sa introduca
+        username-ul si parola. Daca verificarea acestora in baza de date este realizata cu succes, utilizatorul va fi
+        autentificat pe aplicatie si va fi redirectionat catre pagina principala "principal.php".</p>
+    </section>
+    <section id="creareCont">
+      <h3>Creare Cont</h3>
+      <p>
+        Crearea contului se poate realiza din pagina "welcomeSignUp.php", disponibila prin apasarea butonului Sign Up
+        din pagina "welcome.php". Pentru inregistrare, utilizatorul trebuie sa completeze un formular in care trebuie
+        introduse urmatoarele date: nume, email, numar de telefon, username, parola dar si posibilele ingrediente la
+        care acesta este alergic( Fish, Milk, etc.). Finalizarea actiunii de creare cont se realizeaza prin apasarea
+        butonului Sign Up.
+      </p>
+      <p>
+        Un utilizator isi poate crea un singur cont cu acelasi username sau acelasi email.
+      </p>
+      <p>
+        Toate campurile din formularul de creare cont trebuie sa fie completate, mai putin formularul cu alergeni.
+      </p>
+      <p>
+        Daca nu au existat probleme la completarea formularului, contul de utilizator este adaugat in baza de date iar
+        clientul va fi automat autentificat pe aplicatie.
+      </p>
+    </section>
+
+    <section id="administrator">
+
+      <h3>Administratorul</h3>
+      <p>
+        Dupa autentificare, administratorul are posibilitatea de a vizualiza produsele grupate pe categorii
+        ("Subcategory.php"), poate vizualiza fiecare produs in parte din pagina ("productPage.php"), pagini care sunt
+        disponibile din meniu. De asemenea, administratorul poate accesa pagina "administrator.php"- pagina disponibila
+        in header, de unde poate accesa pagina "addproduct.php" unde va putea adauga sau sterge un produs,poate accesa
+        pagina "adduser.php" de unde poate adauga sau sterge un cont de utilizator, poate accesa pagina "addgroup.php"
+        de unde poate adauga un nou grup de utilizatori. Din pagina "administrator.php" acesta poate exporta date in
+        format CSV, PDF sau RSS. Administratorul are posibilitatea de a cauta produse in aplicatie, acest lucru realizanduse
+		prin intermediul butonului de search din header. In pagina "administrator.php" acesta poate vizualiza si sterge mesajele primite
+		prin formularul de contact.
+      </p>
+    </section>
+    <section id="principal">
+
+      <h3>Pagina principala</h3>
+      <p>
+        Din pagina principala a aplicatiei web, "principal.php", unde utilizatorul sau administratorul este
+        redirectionat direct dupa logare, acestia pot accesa cu ajutorul meniului paginile aferente produselor sau pot
+        accesa cu ajutorul celor trei pictograme din header paginile "lists.php"- pagina disponibila doar pentru un
+        utilizator oarecare, "myAccount.php"- pentru un utilizator oarecare, respectiv "administrator.php"- pentru
+        administrator sau "createGroup.php"- daca un utilizator oarecare nu are un grup din care face parte,
+        "createdGroup.php"- daca un utilizator oarecare are un grup din care face parte, "addgroup.php"- daca este
+        autentificat administratorul. De asemenea, utilizatorul poate cauta produse in aplicatie prin intermediul butonului de search existent in header.
+      </p>
+    </section>
+    <section id="subcategory">
+
+      <h3>Categorii de produse</h3>
+      <p>Din pagina "Subcategory.php"- pagina disponibila din meniul aplicatiei, utilizatorul poate vizualiza produse
+        grupate pe categorii, de unde acesta are posibilitatea apasarii unor trei butoane:
+      <ul>
+        <li>"View product"- prin apasarea acestui buton utilizatorul este redirectionat catre pagina produsului
+          respectiv("productPage.php")</li>
+        <li>"Add to favorites"- prin apasarea acestui buton utilizatorul poate adauga produsul respectiv la favoritele
+          sale</li>
+        <li>"Add to list"- prin apasarea acestui buton utilizatorul poate adauga produsul respectiv la lista sa de
+          cumparaturi.</li>
+      </ul>
+      </p>
+    </section>
+    <section id="productPage">
+      <h3>Pagina unui produs</h3>
+      <p>Din pagina "Subcategory.php" utilizatorul poate accesa apasand butonul "View product" pagina produsul
+        respectiv. In aceasta pagina, utilizatorul poate vizualiza informatiile produsului respectiv si poate accesa
+        urmatoarele butoane:
+      <ul>
+        <li>"Add to list"- buton care adauga produsul respectiv la lista de cumparaturi a utilizatorului. Daca
+          utilizatorul are deja acest produs in lista de cumparaturi, acesta este anuntat printr-un mesaj.</li>
+        <li>"Add to favorite"- buton care adauga produsul respectiv la favorite. Daca utilizatorul are deja acest produs
+          la favorite, acesta este anuntat printr-un mesaj.</li>
+      </ul>
+      Daca produsul respectiv contine ingrediente la care utilizatorul autentificat este alergic, utilizatorul este
+      anuntat.
+      </p>
+    </section>
+    <section id="lists">
+      <h3>Lista de cumparaturi</h3>
+      <p>
+        Pagina "lists.php"- pagina disponibila din header, ii arata utilizatorului produsele care le-a adaugat in lista
+        de cumparaturi. Acesta poate sterge tot produsul din lista sa de cumparaturi sau are optiunea de a sterge
+        fiecare ingredient in parte a unui produs. Daca utilizatorul a sters toate ingredientele unui produs din lista,
+        tot produsul va fi sters din lista sa de cumparaturi.
+      </p>
+    </section>
+    <section id="myAccount">
+      <h3>Pagina contului de utilizator</h3>
+      <p>
+        Pagina "myAccount.php"- disponibila din header, ii arata utilizatorul datele contului si ii ofera posibilitatea
+        de a le modifica. De asemenea, poate vizualiza produsele favorite si le poate inlatura din favorite.
+      </p>
+    </section>
+    <section id="group">
+      <h3>Pagina unui grup de utilizatori</h3>
+      <p>Pagina disponibila din header, "createdGroup.php"- pentru un utilizator care face deja parte dintr-un grup sau
+        "createGroup.php"- pentru un utilizator care nu face parte dintr-un grup. Din pagina "createdGroup.php"
+        utilizatorul poate invita un utilizator in grupul respectiv, poate crea un plan alimentar pentru o anumita zi
+        sau poate edita sau sterge unul existent deja. Aceste planuri pot fi vizualizate de fiecare membru afiliat
+        grupului. Pagina "createGroup.php" ii ofera posibilitatea utilizatorului care nu face parte dintr-un alt grup sa
+        creeze un grup nou.
+      </p>
+    </section>
+    <section id="contact">
+      <h3>Pagina de contact</h3>
+      <p>Pagina disponibila din footer, aceasta ii ofera posibilitatea utilizatorului sa trimita un mesaj
+        administratorului.
+      </p>
+    </section>
+  </section>
+</body>
+</html>
